@@ -1,0 +1,1 @@
+<META http-equiv="Refresh" CONTENT="0, URL=cliente.jsf">
