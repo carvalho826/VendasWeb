@@ -28,7 +28,7 @@ public class ProdutoTest {
 		sessao = HibernateUtil.getSession().getCurrentSession();
 		transacao = sessao.beginTransaction();
 	}
-
+ 
 	@AfterClass
 	public static void fechaConexao() {
 		try {

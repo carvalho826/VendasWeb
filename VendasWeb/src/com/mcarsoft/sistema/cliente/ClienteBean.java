@@ -1,6 +1,8 @@
 package com.mcarsoft.sistema.cliente;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
@@ -12,6 +14,8 @@ import javax.faces.context.FacesContext;
 public class ClienteBean {
 
 	private Cliente clienteSelecionado = new Cliente();
+	
+	private List<Cliente> lista = null;
 	
 	public void salvar(){
 		ClienteRN clienteRN  = new ClienteRN();
@@ -28,5 +32,13 @@ public class ClienteBean {
 
 	public void setClienteSelecionado(Cliente clienteSelecionado) {
 		this.clienteSelecionado = clienteSelecionado;
+	}
+
+	public List<Cliente> getLista() {
+		ClienteRN clienteRN  = new ClienteRN();
+		if (lista == null) {
+			lista = clienteRN.listar();
+		}
+		return lista;
 	}
 }
